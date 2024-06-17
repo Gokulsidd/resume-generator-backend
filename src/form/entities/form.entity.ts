@@ -12,22 +12,22 @@ export type FormDocument = Form & Document;
     timestamps: true,
 })
 export class WorkExperience {
-    @Prop({ required: true })
+    @Prop( )
     companyName: string;
 
-    @Prop({ required: true })
+    @Prop( )
     location: string;
 
-    @Prop({ required: true })
+    @Prop( )
     startedDate: string;
 
-    @Prop({ required: true })
+    @Prop( )
     endDate: string;
 
-    @Prop({ required: true })
+    @Prop( )
     jobTitle: string;
 
-    @Prop({ required: true })
+    @Prop( )
     keyAchievements: string;
 }
 
@@ -35,16 +35,16 @@ export const WorkExperienceSchema = SchemaFactory.createForClass(WorkExperience)
 
 @Schema()
 export class Education {
-    @Prop({ required: true })
+    @Prop( )
     institutionName: string;
 
-    @Prop({ required: true })
+    @Prop( )
     degree: string;
 
-    @Prop({ required: true })
+    @Prop( )
     major: string;
 
-    @Prop({ required: true })
+    @Prop( )
     yearOfGraduation: string;
 }
 
@@ -52,10 +52,10 @@ export const EducationSchema = SchemaFactory.createForClass(Education);
 
 @Schema()
 export class Skill {
-    @Prop({ required: true })
+    @Prop( )
     name: string;
 
-    @Prop({ required: true })
+    @Prop( )
     proficiency: string;
 }
 
@@ -96,22 +96,22 @@ export class Form {
     })
     userId: string;
 
-    @Prop({ required: true })
+    @Prop( )
     fullName: string;
 
-    @Prop({ required: true })
+    @Prop( )
     email: string;
 
-    @Prop({ required: true })
+    @Prop( )
     phoneNumber: string;
 
-    @Prop({ required: true })
+    @Prop( )
     linkedInProfileUrl: string;
 
-    @Prop({ required: true })
+    @Prop( )
     summary: string;
 
-    @Prop({ required: true })
+    @Prop( )
     yearsOfExperience: string;
 
     @Prop({ type: [WorkExperienceSchema], default: [] })
@@ -120,22 +120,22 @@ export class Form {
     @Prop({ type: [EducationSchema], default: [] })
     education: Education[];
 
-    @Prop({ type: SkillsSchema, required: true })
+    @Prop({ type: SkillsSchema})
     skills: Skills;
 
-    @Prop({ required: true })
+    @Prop( )
     awardsAndRecognition: string;
 
-    @Prop({ required: true })
+    @Prop( )
     certifications: string;
 
-    @Prop({ required: true })
+    @Prop( )
     volunteerWork: string;
 
-    @Prop({ required: true })
+    @Prop( )
     foreignLanguagesSpoken: string;
 
-    @Prop({ required: true })
+    @Prop( )
     publications: string;
 }
 
