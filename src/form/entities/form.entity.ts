@@ -51,6 +51,29 @@ export class Education {
 export const EducationSchema = SchemaFactory.createForClass(Education);
 
 @Schema()
+export class Project {
+    @Prop( )
+    projectName: string;
+
+    @Prop( )
+    description: string;
+
+    @Prop( )
+    duration: string;
+
+    @Prop( )
+    technologies: string;
+
+    @Prop( )
+    rolesAndResponsibilities: string;
+
+    @Prop( )
+    githubCodeLink: string;
+}
+
+export const ProjectSchema = SchemaFactory.createForClass(Project);
+
+@Schema()
 export class Skill {
     @Prop( )
     name: string;
@@ -119,6 +142,9 @@ export class Form {
 
     @Prop({ type: [EducationSchema], default: [] })
     education: Education[];
+
+    @Prop({ type: [ProjectSchema], default: [] })
+    project: Project[];
 
     @Prop({ type: SkillsSchema})
     skills: Skills;
