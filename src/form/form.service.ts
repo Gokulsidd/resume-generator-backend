@@ -13,6 +13,7 @@ export class FormService {
 
   async create(createFormDto: CreateFormDto): Promise<any> {
     const createdForm = new this.formModel(createFormDto);
+    console.log(createdForm)
     return createdForm.save();
   }
 

@@ -68,7 +68,7 @@ export class Project {
     rolesAndResponsibilities: string;
 
     @Prop( )
-    githubCodeLink: string;
+    githubRepoLink: string;
 }
 
 export const ProjectSchema = SchemaFactory.createForClass(Project);
@@ -144,7 +144,7 @@ export class Form {
     education: Education[];
 
     @Prop({ type: [ProjectSchema], default: [] })
-    project: Project[];
+    projects: Project[];
 
     @Prop({ type: SkillsSchema})
     skills: Skills;
