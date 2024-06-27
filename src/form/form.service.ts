@@ -29,6 +29,14 @@ export class FormService {
     return form;
   }
 
+  async findOneByEmail(email: string): Promise<Form> {
+    const form = await this.formModel.findOne({ email }).exec();
+    if(!form) {
+      throw new NotFoundException(`Form with email "${email}" not found`)
+    }
+    return form
+  }
+
   async update(id: string, updateFormDto: UpdateFormDto): Promise<Form> {
     const existingForm = await this.formModel.findByIdAndUpdate(id, updateFormDto, { new: true }).exec();
     if (!existingForm) {
